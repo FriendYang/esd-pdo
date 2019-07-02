@@ -6,12 +6,12 @@
  **/
 
 
-namespace ESD\Plugins\Pdo;
+namespace ESDPDO\Pdo;
 
 use ESD\Psr\DB\DBInterface;
 use PDO;
 use PDOException;
-use ESD\Plugins\Pdo\PdoException as PDE;
+use ESDPDO\Pdo\PdoException as PDE;
 class PdoDb implements DBInterface
 {
     /**

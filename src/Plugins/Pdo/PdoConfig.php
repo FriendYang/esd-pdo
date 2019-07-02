@@ -6,7 +6,7 @@
  **/
 
 
-namespace ESD\Plugins\Pdo;
+namespace ESDPDO\Pdo;
 
 
 class PdoConfig

@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ESD\\Plugins\\": "src/"
+      "ESDPDO\\": "src/Plugins"
     }
   },
   "authors": [
@@ -18,7 +18,7 @@
       "homepage": "https://github.com/FriendYang"
     }
   ],
-  "name": "esd/pdo-plugin",
+  "name": "yyc/pdo-plugin",
   "type": "library",
   "keywords": ["server", "swoole"],
   "description": "pdo-plugin",
