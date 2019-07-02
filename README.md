@@ -3,7 +3,7 @@
 基于esd框架使用，返回 pdo 链接对象  
 使用案例：
 
-    use App\Plugins\Pdo\GetPdo;
+    use ESDPDO\Pdo\GetPdo;
     class Index extends Base
     {
       use GetPdo;
