@@ -5,7 +5,7 @@
  * time:10:31
  **/
 
-namespace ESDPDO\Pdo;
+namespace App\Plugins\Pdo;
 use ESD\Core\Channel\Channel;
 
 class PdoPool

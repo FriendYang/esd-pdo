@@ -6,12 +6,12 @@
  **/
 
 
-namespace ESDPDO\Pdo;
+namespace App\Plugins\Pdo;
 
 use ESD\Psr\DB\DBInterface;
 use PDO;
 use PDOException;
-use ESDPDO\Pdo\PdoException as PDE;
+use App\Plugins\Pdo\PdoException as PDE;
 class PdoDb implements DBInterface
 {
     /**
@@ -28,13 +28,15 @@ class PdoDb implements DBInterface
 
     public function connect(array $pdoConfig): void
     {
-
         if ($this->_pdo) {
             return;
         }
         try {
-            $this->_pdo = new PDO($pdoConfig['dsn'], $pdoConfig['user'], $pdoConfig['password'], $pdoConfig['options']);
-            $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//            $this->_pdo = new PDO($pdoConfig['dsn'], $pdoConfig['user'], $pdoConfig['password'], $pdoConfig['options']);
+            //$this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $obj = new PDO($pdoConfig['dsn'], $pdoConfig['user'], $pdoConfig['password'], $pdoConfig['options']);
+            $obj->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $obj = $this->_pdo;
         } catch (PDOException $e) {
             throw new PDE($e->getMessage());
         }

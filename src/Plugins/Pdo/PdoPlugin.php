@@ -6,7 +6,7 @@
  **/
 
 
-namespace ESDPDO\Pdo;
+namespace App\Plugins\Pdo;
 
 use ESD\Core\Context\Context;
 use ESD\Core\PlugIn\AbstractPlugin;
@@ -92,7 +92,7 @@ class PdoPlugin extends AbstractPlugin
      */
     public function getConfigList(): array
     {
-        return $this->PdoConfig->getPdoConfigs();
+        return $this->pdoConfig->getPdoConfigs();
     }
 
     /**
@@ -100,7 +100,7 @@ class PdoPlugin extends AbstractPlugin
      */
     public function setConfigList(array $configList): void
     {
-        $this->redisConfig->setPdoConfigs($configList);
+        $this->pdoConfig->setPdoConfigs($configList);
     }
 
     /**
@@ -108,7 +108,7 @@ class PdoPlugin extends AbstractPlugin
      */
     public function addConfigList(PdoOneConfig $pdoOneConfig): void
     {
-        $this->redisConfig->addRedisOneConfig($pdoOneConfig);
+        $this->pdoConfig->addPdoOneConfig($pdoOneConfig);
     }
 
 }

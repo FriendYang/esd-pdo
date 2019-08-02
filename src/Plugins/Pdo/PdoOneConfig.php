@@ -6,7 +6,7 @@
  **/
 
 
-namespace ESDPDO\Pdo;
+namespace App\Plugins\Pdo;
 
 use ESD\Core\Plugins\Config\BaseConfig;
 class PdoOneConfig extends BaseConfig

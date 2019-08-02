@@ -6,7 +6,7 @@
  **/
 
 
-namespace ESDPDO\Pdo;
+namespace App\Plugins\Pdo;
 use PDO;
 
 class PdoManyPool
